@@ -7,6 +7,9 @@ namespace Crisp.Tdd.EdeklarationTests.EndToEnd
     [TestFixture]
     public class TaxCalculatorEndToEndTest
     {
+        // NOTE! This method works if you run the test in the EdeklarationTests\bin\Debug directory.
+        // It won't run correctly from Visual Studio or another directory, and is included
+        // for inspirational purposes.
         private string GetTestedExe()
         {
             return Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,
@@ -14,11 +17,11 @@ namespace Crisp.Tdd.EdeklarationTests.EndToEnd
         }
 
         [Test]
-        public void IngenInkomstIngenSkatt()
+        public void NoIncomeNoTax()
         {
-            var executor = new SimpleOsCommandExecutor(GetTestedExe(), "0 Stockholms");
+            var executor = new SimpleOsCommandExecutor(GetTestedExe(), "0 Stockholm");
             executor.Run();
-            Assert.AreEqual("Slutlig skatt: 0,00 kr", executor.Stdout[0]);
+            Assert.AreEqual("Final tax: 0,00 kr", executor.Stdout[0]);
         }
 
         [Test]

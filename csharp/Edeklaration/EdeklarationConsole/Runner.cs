@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 
 namespace Crisp.Tdd.Edeklaration
 {
@@ -9,7 +11,9 @@ namespace Crisp.Tdd.Edeklaration
     {
         private static void Main(string[] args)
         {
-            Console.Out.WriteLine(args[0] + "," + args[1]);
+            // To avoid locale issues. Feel free to change.
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("sv-SE");
+            Console.Out.WriteLine("Final tax: {0:C2}", Double.Parse(args[0]));
         }
     }
 }
