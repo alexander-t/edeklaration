@@ -1,0 +1,28 @@
+{
+  "name": "edeklaration",
+  "version": "1.0.0",
+  "description": "TDD exercise on Swedish taxation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexander-t/edeklaration.git"
+  },
+  "keywords": [
+    "tdd",
+    "exercise",
+    "tax"
+  ],
+  "author": "Alexander Tarlinder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexander-t/edeklaration/issues"
+  },
+  "homepage": "https://github.com/alexander-t/edeklaration#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  }
+}
