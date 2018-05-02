@@ -7,3 +7,4 @@ bin
 obj
 *.suo
 packages
+node_modules
